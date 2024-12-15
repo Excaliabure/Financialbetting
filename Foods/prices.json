@@ -1,0 +1,31 @@
+{
+      "test": {
+            "figs": {
+                  "bought at": 3.99,
+                  "per unit": -1,
+                  "per lb": -1
+            }
+      },
+      "Sprouts": {
+            "Figs": {
+                  "amt": -1,
+                  "bought at": 3.99,
+                  "per unit": -1.0,
+                  "per lb": -1.0
+            },
+            "er": {
+                  "amt": -1,
+                  "bought at": 3.0,
+                  "per unit": 2.0,
+                  "per lb": 2.0
+            }
+      },
+      "vsr": {
+            "fe": {
+                  "amt": -1,
+                  "bought at": 1.0,
+                  "per unit": 1.0,
+                  "per lb": 1.0
+            }
+      }
+}

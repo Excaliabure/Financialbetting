@@ -1,0 +1,47 @@
+{
+    "Settings": {
+        "Api Key": "",
+        "Account ID": "101-001-27337634-001",
+        "Practice Account": true,
+        "Trade Duration": 28800,
+        "Trade Interval": 900,
+        "coef" : 0.5,
+        "General Settings" : "true",
+        "units" : 10000,
+        "sltp" : 30,
+        "count" : 7,
+
+        "Pair Settings": {
+            "EUR_USD": {
+                "units": 1000,
+                "sltp": 10,
+                "count": 2
+            },
+            "GBP_USD": {
+                "units": 500,
+                "sltp": 15,
+                "count": 2
+            },
+            "AUD_USD": {
+                "units": 700,
+                "sltp": 8,
+                "count": 2
+            },
+            "USD_CAD": {
+                "units": 600,
+                "sltp": 9,
+                "count": 2
+            },
+            "NZD_USD": {
+                "units": 400,
+                "sltp": 7,
+                "count": 2
+            },
+            "USD_CHF": {
+                "units": 900,
+                "sltp": 11,
+                "count": 2
+            }
+        }        
+    }
+}

@@ -1,0 +1,326 @@
+{
+    "data": [
+        {
+            "news_url": "https://www.barrons.com/articles/tesla-stock-elon-musk-drugs-aa368537",
+            "image_url": "https://cdn.snapi.dev/images/v1/d/7/auto34-2219481.jpg",
+            "title": "An Article About Elon Musk's Alleged Drug Use Means More Volatility for Tesla Stock",
+            "text": "The story puts “key man risk” at the EV maker in the spotlight",
+            "source_name": "Barrons",
+            "date": "Sun, 07 Jan 2024 16:20:00 -0500",
+            "topics": [
+                "CEO",
+                "paywall"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.fool.com/investing/2024/01/07/what-happened-to-tesla-last-week/",
+            "image_url": "https://cdn.snapi.dev/images/v1/w/l/podc10-2219410.jpg",
+            "title": "Starting 2024 on the Wrong Foot. What Happened to Tesla Last Week?",
+            "text": "Here's everything you need to know about the electric vehicle maker's week.",
+            "source_name": "The Motley Fool",
+            "date": "Sun, 07 Jan 2024 10:30:00 -0500",
+            "topics": [
+                "podcast"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.forbes.com/sites/zacharyfolk/2024/01/07/elon-musk-claims-not-even-trace-amounts-of-drugs-in-his-system-after-report-detailed-drug-concerns-from-tesla-spacex-execs/",
+            "image_url": "https://cdn.snapi.dev/images/v1/e/q/elon-musk-claims-not-even-trace-amounts-of-drugs-in-his-system-after-report-detailed-drug-concerns-from-tesla-spacex-execs-2219412.jpg",
+            "title": "Elon Musk Claims “Not Even Trace Amounts” Of Drugs In His System After Report Detailed Drug Concerns From Tesla, SpaceX Execs",
+            "text": "Elon Musk denied using illegal drugs on Sunday, claiming “not even trace quantities” of drugs or alcohol were found in his body over three years of random drug tests, after a report in the Wall Street Journal detailed how the Tesla CEO and SpaceX founder's drug use worries colleagues in leadership positions at his companies.",
+            "source_name": "Forbes",
+            "date": "Sun, 07 Jan 2024 10:25:08 -0500",
+            "topics": [
+                "CEO",
+                "paylimitwall"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://investorplace.com/2024/01/why-tesla-could-get-dethroned-as-the-king-of-evs-in-2024/",
+            "image_url": "https://cdn.snapi.dev/images/v1/o/4/tsla1600-8-2219382.png",
+            "title": "Why Tesla Could Get Dethroned as the King of EVs in 2024",
+            "text": "Tesla (NASDAQ: TSLA ) has been the undisputed champion of electric vehicle stocks over the past decade. Indeed, without Tesla, perhaps this industry may not exist in its current fashion.",
+            "source_name": "InvestorPlace",
+            "date": "Sun, 07 Jan 2024 09:30:00 -0500",
+            "topics": [],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://247wallst.com/autos/2024/01/07/will-elon-musks-drug-use-hurt-tesla/",
+            "image_url": "https://cdn.snapi.dev/images/v1/u/e/tesla-model-3-2217904-2219363.jpg",
+            "title": "Will Elon Musk's Drug Use Hurt Tesla?",
+            "text": "In a long and extremely detailed article, The Wall Street Journal reported that Tesla (NASDAQ: TSLA) founder Elon Musk has used serious and often illegal drugs.",
+            "source_name": "24/7 Wall Street",
+            "date": "Sun, 07 Jan 2024 07:22:31 -0500",
+            "topics": [
+                "CEO"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.fool.com/investing/2024/01/07/huge-news-for-tesla-stock-investors/",
+            "image_url": "https://cdn.snapi.dev/images/v1/f/g/podc5-2219334.jpg",
+            "title": "Huge News for Tesla Stock Investors",
+            "text": "Tesla's production surpassed 1.8 million units for 2023.",
+            "source_name": "The Motley Fool",
+            "date": "Sun, 07 Jan 2024 06:00:00 -0500",
+            "topics": [
+                "podcast"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.businessinsider.com/tesla-board-members-elon-musk-tweeting-420-drugs-wsj-2024-1",
+            "image_url": "https://cdn.snapi.dev/images/v1/6/5/659a214aec62ab5daf8155f3formatjpeg-2219298.jpg",
+            "title": "Tesla board members worried Elon Musk was on drugs when he shot off his infamous 'funding secured' tweet, WSJ reports",
+            "text": "Elon Musk shocked Tesla shareholders in 2018 when he announced he wanted to take the company private.   A new WSJ report revealed that some board members were concerned that he was on drugs when tweeting.",
+            "source_name": "Business Insider",
+            "date": "Sat, 06 Jan 2024 23:48:30 -0500",
+            "topics": [
+                "CEO",
+                "paywall"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.businessinsider.com/tesla-board-director-worried-elon-musk-drug-use-wsj-2024-1",
+            "image_url": "https://cdn.snapi.dev/images/v1/6/5/659a1c0b6979d737182113c4formatjpeg-2219297.jpg",
+            "title": "Elon Musk's drug use was so concerning it prompted a Tesla director to forgo a reelection bid, WSJ reports",
+            "text": "The Wall Street Journal reported executives across Elon Musk's companies worry about his drug use. A former Tesla director didn't seek reelection to the company's board due to his drug use, per The Journal.",
+            "source_name": "Business Insider",
+            "date": "Sat, 06 Jan 2024 23:18:26 -0500",
+            "topics": [
+                "CEO",
+                "paywall"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.wsj.com/articles/elon-musk-illegal-drugs-e826a9e1",
+            "image_url": "https://cdn.snapi.dev/images/v1/w/z/social-2219277.jpg",
+            "title": "Elon Musk Has Used Illegal Drugs, Worrying Leaders at Tesla and SpaceX",
+            "text": "Some executives and board members fear the billionaire's use of drugs—including LSD, cocaine, ecstasy, mushrooms and ketamine—could harm his companies.",
+            "source_name": "WSJ",
+            "date": "Sat, 06 Jan 2024 21:00:00 -0500",
+            "topics": [
+                "CEO",
+                "paywall"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://thedogofwallstreet.com/byddf/byd-vs-tesla-is-tesla-in-trouble?utm_source=snapi",
+            "image_url": "https://cdn.snapi.dev/images/v1/k/s/t123s9-2219227.webp",
+            "title": "BYD vs Tesla: Is Tesla in Trouble?",
+            "text": "Are any investors more frustrated now than Tesla (NASDAQ: TSLA) shareholders?",
+            "source_name": "The Dog of Wall Street",
+            "date": "Sat, 06 Jan 2024 11:30:00 -0500",
+            "topics": [],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "tickers": [
+                "TSLA",
+                "BYDDF",
+                "BYDDY"
+            ]
+        },
+        {
+            "news_url": "https://investorplace.com/2024/01/3-growth-stocks-to-sell-in-january-before-they-crash-and-burn/",
+            "image_url": "https://cdn.snapi.dev/images/v1/a/5/stocks-red-down-bearish-hands-1600-2219187.jpg",
+            "title": "3 Growth Stocks to Sell in January Before They Crash and Burn",
+            "text": "Growth stocks performed well in 2023. Many stocks rallied as investors felt the optimism and lower inflation readings made people anticipate interest rate reductions in 2024.",
+            "source_name": "InvestorPlace",
+            "date": "Sat, 06 Jan 2024 10:36:44 -0500",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "ETSY",
+                "NFLX",
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.fool.com/investing/2024/01/06/5-innovative-stocks-that-could-score-win-in-2024/",
+            "image_url": "https://cdn.snapi.dev/images/v1/u/r/urlhttps3a2f2fgfoolcdncom2feditorial2fimages2f7590472fgettyimages-2024-stocks-chartjpgopresizew400h400-2219145.jpg",
+            "title": "5 Innovative Stocks That Could Score a Win for Your Portfolio in 2024",
+            "text": "Some of these stocks already have delivered big gains, but still have plenty of room to run. Others, thanks to their game-changing technologies, could see their share prices take off at any moment.",
+            "source_name": "The Motley Fool",
+            "date": "Sat, 06 Jan 2024 05:00:00 -0500",
+            "topics": [],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "CRSP",
+                "DNA",
+                "GOOG",
+                "GOOGL",
+                "TDOC",
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.wsj.com/articles/the-score-tesla-xerox-peloton-walgreens-1adc8c7d",
+            "image_url": "https://cdn.snapi.dev/images/v1/f/p/urlhttps3a2f2fgfoolcdncom2feditorial2fimages2f7584972fa-couple-of-investors-looking-at-a-series-of-chartsjpgopresizew400h400-2204774-2209774-2218865.jpg",
+            "title": "The Score: Tesla, Xerox, Peloton and More Stocks That Defined the Week",
+            "text": "Here are some of the major companies whose stocks moved on the week's news.",
+            "source_name": "WSJ",
+            "date": "Fri, 05 Jan 2024 16:45:00 -0500",
+            "topics": [
+                "paywall"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "tickers": [
+                "TSLA",
+                "XRX",
+                "PTON"
+            ]
+        },
+        {
+            "news_url": "https://investorplace.com/2024/01/lawmakers-want-ev-makers-to-stay-out-of-union-negotiations-that-would-be-good-for-ev-stocks-too/",
+            "image_url": "https://cdn.snapi.dev/images/v1/b/6/electric-vehicle-car-charging-1600-2218861.jpg",
+            "title": "Lawmakers Want EV Makers to Stay Out of Union Negotiations. That Would Be Good for EV Stocks, Too.",
+            "text": "After winning an important victory for employees of Detroit's “Big Three” automakers, the United Auto Workers (UAW) union isn't slowing down. The union successfully secured new contracts for workers at Ford (NYSE: F ), General Motors (NYSE: GM ) and Stellantis (NYSE: STLA ).",
+            "source_name": "InvestorPlace",
+            "date": "Fri, 05 Jan 2024 16:32:21 -0500",
+            "topics": [],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "F",
+                "GM",
+                "RIVN",
+                "STLA",
+                "TM",
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.youtube.com/watch?v=MadqNBkxowY",
+            "image_url": "https://cdn.snapi.dev/images/v1/s/y/tesla-recalls-16-million-cars-due-to-autopilot-crash-risk-2218495.jpg",
+            "title": "Tesla Recalls 1.6 Million Cars Due to Autopilot Crash Risk",
+            "text": "Tesla is recalling 1.6 million cars sold in China due to issues with its Autopilot system. Regulators says there's a higher risk for crashes.",
+            "source_name": "Bloomberg Markets and Finance",
+            "date": "Fri, 05 Jan 2024 11:20:59 -0500",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Video",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.youtube.com/watch?v=kkVogXeqb_Y",
+            "image_url": "https://cdn.snapi.dev/images/v1/m/b/tesla-recalls-16m-evs-in-china-over-autopilot-concerns-2218419.jpg",
+            "title": "Tesla recalls 1.6M EVs in China over Autopilot concerns",
+            "text": "Tesla (TSLA) is recalling over 1.6 million of its Models S, X, 3, and Y EVs exported to China over concerns around its Autopilot autonomous driving feature. Yahoo Finance anchors Seana Smith and Myles Udland discuss Tesla's EV competition in the Chinese market while monitoring Tesla shares in Friday's pre-market trading session.",
+            "source_name": "Yahoo Finance",
+            "date": "Fri, 05 Jan 2024 11:10:44 -0500",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Video",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.investopedia.com/tesla-recalls-more-than-1-million-vehicles-in-china-8422684",
+            "image_url": "https://cdn.snapi.dev/images/v1/o/9/gettyimages-1237080512-1ec6275456f44209a958b74d17aec729-2218403.jpg",
+            "title": "Tesla Recalls More Than 1.6 Million Vehicles in China",
+            "text": "Electric vehicle maker Tesla (TSLA) is recalling 1.62 million vehicles in China, its second-largest market, over issues with its Autopilot driver-assistance system, according to China's State Administration for Market Regulations.",
+            "source_name": "Investopedia",
+            "date": "Fri, 05 Jan 2024 11:00:52 -0500",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.theguardian.com/technology/2024/jan/05/tesla-china-recall-autopilot",
+            "image_url": "https://cdn.snapi.dev/images/v1/5/6/5616jpgwidth460quality85autoformatfitmaxs22466a85a8b24a17ab48429f0ca6e9c5-2218399.jpg",
+            "title": "Tesla recalls 1.6m cars in China over Autopilot and steering defects",
+            "text": "Recall reportedly affects majority of cars firm has sold in China and follows recall of more than 2m Teslas in the US last month",
+            "source_name": "The Guardian",
+            "date": "Fri, 05 Jan 2024 10:35:44 -0500",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.cnbc.com/2024/01/05/tesla-recalls-over-1point6-million-cars-in-china-over-autopilot-locks.html",
+            "image_url": "https://cdn.snapi.dev/images/v1/p/f/107300155-1694619606368-gettyimages-1662847761-ai-ceos-503-091323-2218201.jpeg",
+            "title": "Tesla recalls more than 1.6 million cars in China over problems with Autopilot, locks",
+            "text": "Tesla is recalling more than 1.6 million vehicles in China, state regulators announced Friday.",
+            "source_name": "CNBC",
+            "date": "Fri, 05 Jan 2024 09:13:36 -0500",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        },
+        {
+            "news_url": "https://www.proactiveinvestors.co.uk/companies/news/1037628?SNAPI",
+            "image_url": "https://cdn.snapi.dev/images/v1/u/o/tesla-giga-berlin-quality-control-2218164.jpg",
+            "title": "Tesla Model Y UK's best-selling BEV for second year running",
+            "text": "Tesla Inc (NASDAQ:TSLA)'s Model Y claimed the title as the most-sold battery electric vehicle (EV) in the UK for the second year running, Society of Motor Manufacturers and Traders (SMMT) data revealed on Friday. Some 35,899 models of the car were sold in the UK over the year, marginally up on 35,551 in 2022, placing it above models by the likes of MG, Audi and Polstar.",
+            "source_name": "Proactive Investors",
+            "date": "Fri, 05 Jan 2024 09:02:24 -0500",
+            "topics": [
+                "product"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "tickers": [
+                "TSLA"
+            ]
+        }
+    ]
+}
+
