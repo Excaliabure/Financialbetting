@@ -5,9 +5,10 @@
         "Practice Account": true,
         "Trade Duration": 28800,
         "Trade Interval": 900,
+        "Iterations" : 200,
         "coef" : 0.5,
         "General Settings" : "true",
-        "units" : 10000,
+        "units" : 1000,
         "sltp" : 30,
         "count" : 7,
 

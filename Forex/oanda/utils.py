@@ -410,3 +410,15 @@ def get_safties_dst(arr):
     
     # return np.array(t).mean()
     return t
+
+def smooth_ma(arr_, amt=6):
+    arr = arr_.copy()
+    arr[0] = arr_[0]
+    for j in range(amt):
+        for i in range(2,len(arr)):
+
+            mid = (arr[i] - arr[i-1])/2
+            arr[i-1] += mid
+            arr[i] -= mid
+            
+    return arr

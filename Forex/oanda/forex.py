@@ -32,11 +32,13 @@ from oandapyV20 import API
 class forex():
 
     def __init__(self, pair = "EURUSD", path="history", mode="min", deep_update= True):
-        
+        pair = pair.replace("_","")
 
         self.path_pair = join(path,pair)
         self.path = path
+        
         self.pair = pair
+        
         self.mode = mode
     
         if (not os.path.exists(join(path))): # Creates core history
@@ -161,7 +163,7 @@ class ForexApi():
         self.pair = pair_c
         self.history = forex(pair_c.replace("_",""))
         self.current_focus = "hr"
-        self.focus = self.history.hr.to_numpy()
+        self.arr = self.history.hr.to_numpy()
 
         if not os.path.exists("log.txt"):
             a = open("log.txt","w")
@@ -171,14 +173,14 @@ class ForexApi():
     def change_focus(self,f="hr"):
         self.current_focus = f
         if f == "min":
-            self.focus = self.history.min.to_numpy()
+            self.arr = self.history.min.to_numpy()
         elif f == "day":
-            self.focus = self.history.day.to_numpy()
+            self.arr = self.history.day.to_numpy()
         else:
-            self.focus = self.history.hr.to_numpy()
+            self.arr = self.history.hr.to_numpy()
         return f
 
-    def buy_sell(self, pair, units, pip_diff, view=False, time_In_Force="FOK",type_="MARKET", price="1"):
+    def buy_sell(self, pair, units, pip_diff, view=False, terminal_print=True, time_In_Force="FOK",type_="MARKET", price="1"):
         """ 
         :params
             pair - forex pair, ex [EURUSD EUR/USD EUR_USD] are all valid formats
@@ -224,28 +226,47 @@ class ForexApi():
             }
         }
         
+
+        if terminal_print:
+            print(order_info)
+        
         if view:
             return order_info
         else:
             o = Order.OrderCreate(self.accountid,order_info)
             resp = self.api.request(o)
+            
             return resp
     
 
-    def get_pair(self, _pair):
+    def get_pair(self, _pair, count=1, granularity="M1", return_price_1=True):
         
         p = _pair
         if "_" not in p:
             p = _pair[:3] + "_" + _pair[3:]
 
         f = json.load(open("settings.json"))["Settings"]
-        request = PricingInfo(accountID=self.accountid, params={"instruments": p})
+
+        current_time = datetime.datetime.now()
+        start_time = (current_time - datetime.timedelta(minutes=50)).isoformat() + "Z"
+        end_time = current_time.isoformat() + "Z"
+
+        parm = {
+            "instruments" : p,
+            "granularity": granularity,
+            "from": start_time,
+            "to": end_time
+        }
+
+
+        request = PricingInfo(accountID=self.accountid, params=parm)
         response = self.api.request(request)
 
         # Extract bid and ask prices from the response
         prices = response.get("prices", [])
         asset_price = float(prices[0]['asks'][0]['price'])
-        return asset_price
+
+        return response
 
         
     def close(self, _pair):
@@ -256,6 +277,7 @@ class ForexApi():
         list_orders = Positions.OpenPositions(self.accountid)
         order_dict = self.api.request(list_orders)
         plist = order_dict['positions']
+        pair_info = None
 
         for i in plist:
             if i['instrument'] == pair:       
@@ -265,8 +287,8 @@ class ForexApi():
 
         if pair_info == None:
             return -1
-
-        toclose = ({"longUnits" : "ALL"} if int(pair_info['long']['units']) != 0 else {"shortUnits" : "ALL"})
+        else:
+            toclose = ({"longUnits" : "ALL"} if int(pair_info['long']['units']) != 0 else {"shortUnits" : "ALL"})
         
         try:
             req = Positions.PositionClose(accountID=self.accountid, instrument=pair, data=toclose)
@@ -515,6 +537,10 @@ class ForexApi():
 
 
 
+    def update_history(self):
+
+        forex(self.pair).update()
+        return 
 
 
 
