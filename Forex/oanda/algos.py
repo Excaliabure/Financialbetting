@@ -153,7 +153,7 @@ def second_deriv(env,settings,start_time):
             
             ddy_avg = ddy.mean()
             d1 = ddy[-1]
-            hold_position = 1 if ddy[-1] < 0 else -1 
+            hold_position = -1 if ddy[-1] < 0 else 1 
 
             
             if current_position != hold_position:
