@@ -293,8 +293,10 @@ class ForexApi():
         try:
             req = Positions.PositionClose(accountID=self.accountid, instrument=pair, data=toclose)
             self.api.request(req)
-            return float(pair_info['unrealizedPL'])
+            # return float(pair_info['unrealizedPL'])
+            return 1
         except:
+            # print(f"UNABLE TO CLOSE {pair} (DNE)")
             return 0
 
     def close_all(self):
@@ -336,8 +338,8 @@ class ForexApi():
             for i in positions['positions']:
                 if i['instrument'] == pair:
                     return i
-        
-        return 1
+        # Return None if not found
+        return None
     
     
 
@@ -488,12 +490,6 @@ class ForexApi():
         arr = self.focus
         temp = np.array([(arr[k-1] + arr[k]) for k in range(1,len(arr))]) / 2
         return temp
-
-
-
-
-
-
 
 
 

@@ -1,7 +1,8 @@
 from datetime import datetime
 import random
 import time
-from utils import log
+from utils import log, smooth_ma
+from forex import *
 
 def fify_fify(env, settings, start_time):
     endtime = start_time + settings['Trade Duration']
@@ -76,3 +77,109 @@ def fify_fify(env, settings, start_time):
     ##### End Main Loop #####
 
 
+def second_deriv(env,settings,start_time):
+
+
+        # Preprocessing
+    # Close, High, Low, Open
+
+
+
+
+
+
+
+    # y = y[2:]
+    # dy = deriv(y)
+    # ddy = deriv(deriv(y))
+
+    # f, axes = plt.subplots(3,1, figsize=(5,5))
+    # axes[0].plot(y, label='y')
+    # # axes[0].plot(y_prev, label='y_prev')
+    # axes[1].plot(dy)
+    # axes[2].plot(ddy)
+    # plt.show()
+
+    # Initial Buy sell position placing
+
+
+    history_arr_dict = {}
+    for pair in settings['Pair Settings'].keys():
+        weights = np.array([0,0,0.8,0.1,0.1,0])
+        fx = forex(pair)
+        history_arr = fx.min.iloc[1:,1:].to_numpy(dtype=float) @ weights
+        val = float(env.get_pair(pair)['prices'][0]['bids'][0]['price'])
+        history_arr = np.append(history_arr, val)
+        y = np.array(history_arr)
+        iters = settings['Iterations']
+        c = 0
+        y = smooth_ma(y[len(y) - 30 : ], 3)
+        ddy = deriv(deriv(y))
+        hold_position = -1 if ddy[-3] < 0 else 1
+        current_position = hold_position
+
+        env.close(pair)
+        env.buy_sell(pair, 1000 * current_position, 999, terminal_print = False)
+
+        history_arr = history_arr.tolist()
+        history_arr_dict[pair] = {}
+        history_arr_dict[pair]["history_arr"] = history_arr
+        history_arr_dict[pair]["hold_position"] = hold_position
+        history_arr_dict[pair]["current_position"] = current_position
+        print(f"Put a {'Sell' if current_position == -1 else 'Buy'} position on {pair}")
+        time.sleep(0.5)
+
+
+
+    while c < iters:
+
+        for pair in settings['Pair Settings'].keys():
+
+            current_position = history_arr_dict[pair]["current_position"]
+            hold_position = history_arr_dict[pair]["hold_position"]
+            sltp = settings['Pair Settings'][pair]["sltp"]
+
+            val = float(env.get_pair(pair)['prices'][0]['bids'][0]['price'])
+            
+            history_arr = np.array(history_arr_dict[pair]["history_arr"])
+            history_arr = np.append(history_arr, val)
+            y = smooth_ma(history_arr, 3)
+            history_arr_dict[pair]["history_arr"] = history_arr.tolist()
+
+
+            y = y[2:]
+            dy = deriv(y)
+            ddy = deriv(deriv(y))
+            
+            ddy_avg = ddy.mean()
+            d1 = ddy[-1]
+            hold_position = 1 if ddy[-1] < 0 else -1 
+
+            
+            if current_position != hold_position:
+                
+                q = env.close(pair)
+                print(f"{pair} closed {q}")
+                
+                current_position = hold_position
+                time.sleep(0.5)
+                
+                env.buy_sell(pair, 1000 * current_position, sltp, terminal_print=False)
+                print(f"Put a {'Sell' if hold_position == -1 else 'Buy'} position on {pair} with deriv = {ddy[-1]}")
+                time.sleep(0.5)
+
+
+
+
+            history_arr_dict[pair]["current_position"] = hold_position
+            history_arr_dict[pair]["hold_position"] = hold_position
+            if (env.view(pair) == None):
+                print(f"No sell/buy position for {pair}. Attempting...")
+                tempcurr = history_arr_dict[pair]["current_position"]
+                env.buy_sell(pair, 1000 * tempcurr, sltp, terminal_print=False)
+                print(f"Put a {'Sell' if hold_position == -1 else 'Buy'} position on {pair} with deriv = {ddy[-1]}")
+                
+                
+            c += 1
+
+        time.sleep(15.01)
