@@ -77,7 +77,7 @@ def fify_fify(env, settings, start_time):
     ##### End Main Loop #####
 
 
-def second_deriv(env,settings,start_time):
+def algo_deriv(env,settings,start_time, ret_derivs=False):
 
 
         # Preprocessing
@@ -109,6 +109,7 @@ def second_deriv(env,settings,start_time):
         fx = forex(pair)
         history_arr = fx.min.iloc[1:,1:].to_numpy(dtype=float) @ weights
         val = float(env.get_pair(pair)['prices'][0]['bids'][0]['price'])
+        
         history_arr = np.append(history_arr, val)
         y = np.array(history_arr)
         iters = settings['Iterations']
@@ -118,14 +119,15 @@ def second_deriv(env,settings,start_time):
         hold_position = -1 if ddy[-3] < 0 else 1
         current_position = hold_position
 
-        env.close(pair)
-        env.buy_sell(pair, 1000 * current_position, 999, terminal_print = False)
+        # env.close(pair)
+        # env.buy_sell(pair, 1000 * current_position, 999, terminal_print = False)
 
         history_arr = history_arr.tolist()
         history_arr_dict[pair] = {}
         history_arr_dict[pair]["history_arr"] = history_arr
         history_arr_dict[pair]["hold_position"] = hold_position
         history_arr_dict[pair]["current_position"] = current_position
+        history_arr_dict[pair]["hold_times"] = 2
         print(f"Put a {'Sell' if current_position == -1 else 'Buy'} position on {pair}")
         time.sleep(0.5)
 
@@ -138,6 +140,8 @@ def second_deriv(env,settings,start_time):
             current_position = history_arr_dict[pair]["current_position"]
             hold_position = history_arr_dict[pair]["hold_position"]
             sltp = settings['Pair Settings'][pair]["sltp"]
+            tol = settings['tolerance']
+
 
             val = float(env.get_pair(pair)['prices'][0]['bids'][0]['price'])
             
@@ -153,8 +157,15 @@ def second_deriv(env,settings,start_time):
             
             ddy_avg = ddy.mean()
             d1 = ddy[-1]
-            hold_position = -1 if ddy[-1] < 0 else 1 
+            # hold_position = 1 if dy[-1 0 + ddy.max() * tol
+            if (dy[-1] < 0 - dy.max() * tol):
+                hold_position = 1
+            elif (dy[-1] < 0 + dy.max() * tol):
+                hold_position = -1
 
+            hold_time = -1
+            if ret_derivs:
+                return y,dy,ddy
             
             if current_position != hold_position:
                 
@@ -182,4 +193,4 @@ def second_deriv(env,settings,start_time):
                 
             c += 1
 
-        time.sleep(15.01)
+        time.sleep(7.5)

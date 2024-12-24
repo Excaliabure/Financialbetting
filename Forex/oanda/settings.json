@@ -11,35 +11,11 @@
         "units" : 1000,
         "sltp" : 30,
         "count" : 7,
+        "tolerance": 0.2, 
 
         "Pair Settings": {
         
         "EUR_USD": {
-                "units": 1000,
-                "sltp": 1000,
-                "count": 2
-            },
-        "GBP_AUD": {
-                "units": 1000,
-                "sltp": 1000,
-                "count": 2
-            },
-        "AUD_CAD": {
-                "units": 1000,
-                "sltp": 1000,
-                "count": 2
-            },
-        "CAD_CHF": {
-                "units": 1000,
-                "sltp": 1000,
-                "count": 2
-            },
-        "NZD_USD": {
-                "units": 1000,
-                "sltp": 1000,
-                "count": 2
-            },
-        "USD_SGD": {
                 "units": 1000,
                 "sltp": 1000,
                 "count": 2

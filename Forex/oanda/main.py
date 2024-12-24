@@ -13,7 +13,7 @@ start_time, settings = start()
 
 ##### Start of Logic #####
 
-second_deriv(env,settings,start_time)
+algo_deriv(env,settings,start_time)
 
 ##### End of Logic #####
 
