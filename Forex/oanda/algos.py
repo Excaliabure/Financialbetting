@@ -157,11 +157,19 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
             
             ddy_avg = ddy.mean()
             d1 = ddy[-1]
+
+            # if ddy is 0, thats min/max
+            # if that is case, check deriv if positive, sell pos if neg but pos
+            switchup = 1 if abs(ddy[-1]) > 0 + abs(ddy.max()) * tol else 0
+
+
+
             # hold_position = 1 if dy[-1 0 + ddy.max() * tol
-            if (dy[-1] < 0 - dy.max() * tol):
-                hold_position = 1
-            elif (dy[-1] < 0 + dy.max() * tol):
-                hold_position = -1
+            if switchup:
+                if (dy[-1] < 0 - dy.max() * tol):
+                    hold_position = 1
+                elif (dy[-1] < 0 + dy.max() * tol):
+                    hold_position = -1
 
             hold_time = -1
             if ret_derivs:
@@ -193,4 +201,4 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
                 
             c += 1
 
-        time.sleep(7.5)
+        time.sleep(24.5)
