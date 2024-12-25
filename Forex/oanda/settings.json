@@ -11,7 +11,7 @@
         "units" : 1000,
         "sltp" : 30,
         "count" : 7,
-        "tolerance": 0.2, 
+        "tolerance": 0.09, 
 
         "Pair Settings": {
         
