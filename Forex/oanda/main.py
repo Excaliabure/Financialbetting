@@ -3,7 +3,7 @@ import time
 import random
 from forex import *
 from datetime import datetime
-from algos import fify_fify, second_deriv
+from algos import *
 
 os.system('clear' if os.name != 'nt' else 'cls')
 env = ForexApi()
