@@ -160,15 +160,13 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
 
             # if ddy is 0, thats min/max
             # if that is case, check deriv if positive, sell pos if neg but pos
-            switchup = 1 if abs(ddy[-1]) > 0 + abs(ddy.max()) * tol else 0
-
-
+            switchup = abs(ddy[-1]) > (0 + abs(ddy.max()) * tol)
 
             # hold_position = 1 if dy[-1 0 + ddy.max() * tol
             if switchup:
-                if (dy[-1] < 0 - dy.max() * tol):
+                if (dy[-1] < 0):
                     hold_position = 1
-                elif (dy[-1] < 0 + dy.max() * tol):
+                elif (dy[-1] > 0):
                     hold_position = -1
 
             hold_time = -1
@@ -177,14 +175,14 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
             
             if current_position != hold_position:
                 
-                q = env.close(pair)
+                # q = env.close(pair)
                 print(f"{pair} closed {q}")
                 
                 current_position = hold_position
                 time.sleep(0.5)
                 
-                env.buy_sell(pair, 1000 * current_position, sltp, terminal_print=False)
-                print(f"Put a {'Sell' if hold_position == -1 else 'Buy'} position on {pair} with deriv = {ddy[-1]}")
+                # env.buy_sell(pair, 1000 * current_position, sltp, terminal_print=False)
+                print(f"{'\n[SELL]' if hold_position == -1 else '[BUY]'} position on {pair} with deriv = {ddy[-1]}\n")
                 time.sleep(0.5)
 
 
@@ -193,12 +191,15 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
             history_arr_dict[pair]["current_position"] = hold_position
             history_arr_dict[pair]["hold_position"] = hold_position
             if (env.view(pair) == None):
-                print(f"No sell/buy position for {pair}. Attempting...")
+                print(f"\nNo sell/buy position for {pair}. Attempting...")
                 tempcurr = history_arr_dict[pair]["current_position"]
-                env.buy_sell(pair, 1000 * tempcurr, sltp, terminal_print=False)
-                print(f"Put a {'Sell' if hold_position == -1 else 'Buy'} position on {pair} with deriv = {ddy[-1]}")
-                
+                # env.buy_sell(pair, 1000 * tempcurr, sltp, terminal_print=False)
+                print(f"{'[SELL]' if hold_position == -1 else '[BUY]'} position on {pair} with deriv = {ddy[-1]}\n")
+
+            print(f"y : {y[-1]} | dy : {dy[-1]} | ddy {ddy[-1]}")
+
                 
             c += 1
 
-        time.sleep(24.5)
+
+        time.sleep(30.5)
