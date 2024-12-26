@@ -1,21 +1,22 @@
 {
     "Settings": {
-        "Api Key": "1bdaecf0d61170e2a3260e6e02f60068-08c34e22ca1dbc0f6b7b232c8dde57ef",
+        "Api Key": "N/A",
         "Account ID": "101-001-27337634-001",
         "Practice Account": true,
         "Trade Duration": 28800,
-        "Trade Interval": 900,
+        "Trade Interval": 30,
         "Iterations" : 200000,
         "coef" : 0.5,
         "General Settings" : "true",
         "units" : 1000,
         "sltp" : 30,
         "count" : 7,
-        "tolerance": 0.09, 
+        "tolerance": 0.0001, 
+
 
         "Pair Settings": {
         
-        "EUR_USD": {
+        "AUD_CAD": {
                 "units": 1000,
                 "sltp": 1000,
                 "count": 2

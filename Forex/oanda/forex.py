@@ -157,7 +157,13 @@ class ForexApi():
             a.close()
 
         s = json.load(open("settings.json"))["Settings"]
-        apikey = s["Api Key"]
+        if "Api Key" in s.keys():
+            apikey = s["Api Key"]
+            if apikey == "N/A":
+                apikey = input("Input Api Key: ")
+        else:
+            apikey = input("Input Api Key: ")
+            
         self.accountid = s["Account ID"]
         self.api = API(access_token=apikey, environment="practice", headers={"Accept-Datetime-Format": "UNIX"})
         self.pair = pair_c

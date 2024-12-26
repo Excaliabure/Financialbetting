@@ -108,7 +108,7 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
 
         history_arr = np.array([])
         print("Building Derivatives...")
-        for i in range(3):
+        for i in range(4):
             val = float(env.get_pair(pair)['prices'][0]['bids'][0]['price'])
             history_arr = np.append(history_arr, val)
             time.sleep(5.1)
@@ -167,8 +167,8 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
 
 
 
-            if abs(ddy[i] - dy[i]) < 1e-5:
-                if (dy[i-1] < 0):
+            if abs(ddy[-1] - dy[-1]) < 1e-3:
+                if (dy[-2] < 0):
                     cpos = -1
                 else:
                     cpos = 1
@@ -200,7 +200,7 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
                 print()
                 print(f"No sell/buy position for {pair}. Attempting...")
                 tempcurr = history_arr_dict[pair]["current_position"]
-                # env.buy_sell(pair, 1000 * tempcurr, sltp, terminal_print=False)
+                env.buy_sell(pair, 1000 * tempcurr, sltp, terminal_print=False)
                 print(f"{'[SELL]' if cpos == -1 else '[BUY]'} position on {pair} with deriv = {ddy[-1]}")
                 print()
 
@@ -209,7 +209,5 @@ def algo_deriv(env,settings,start_time, ret_derivs=False):
                 
             c += 1
 
-        if c == 9:
-            return y,dy,ddy
-
-        time.sleep(5.5)
+        
+        time.sleep(settings["Trade Interval"])
